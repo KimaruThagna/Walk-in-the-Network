@@ -9,10 +9,8 @@ Friends.add_edge(2,5)
 Friends.add_edge(7,9)
 
 
-if nx.dijkstra_path(Friends,1,9):
-    print('TRUE')
-else:
-    print('FALSE')
+try:
+    print(nx.dijkstra_path(Friends, 1, 5))
 
-
-
+except:
+    print('No path')
