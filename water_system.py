@@ -1,4 +1,5 @@
 import networkx as nx
+
 '''
 Considering you are in charge of the water system in Nairobi County,
 Below is the water system network. The weights represent the difficulty in terms of pumping costs due to terrain.
@@ -18,8 +19,5 @@ try:
     print(nx.bidirectional_dijkstra(water_system, "pumwani", "pangani"))#optimal path and cost
 
 except:
-    print('No existing path')
-
-
-
+    print('No existing path from source to destination')
 
