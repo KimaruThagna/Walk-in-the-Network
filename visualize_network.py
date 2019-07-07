@@ -3,8 +3,6 @@ from water_system import *
 import plotly.plotly as py
 import plotly.graph_objs as go
 
-
-
 #layout can be one of several, spectral, spring, fruchterman_reingold_layout among others
 pos=nx.fruchterman_reingold_layout(water_system)
 print(pos)# key is node index and value is an array of cordinates the layout algorithm has assigned each node
@@ -63,4 +61,5 @@ layout = dict(title='Nairobi Water System',
               )
 
 fig = dict(data=[trace_edges, trace_nodes], layout=layout)
-py.plot(fig)
+#py.plot(fig)
+plotly.offline.plot(fig)
